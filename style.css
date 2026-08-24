@@ -1,0 +1,1493 @@
+
+
+/* =====================================================
+   FARMX - MODERN FARMING UI
+   ===================================================== */
+
+
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #2f7d32;
+    --dark-green: #1b5e20;
+    --light-green: #eaf6ea;
+    --soft-green: #f5faf5;
+
+    --text: #18221a;
+    --secondary-text: #667066;
+
+    --border: #e1e7e1;
+    --white: #ffffff;
+
+    --danger: #d93025;
+
+    --shadow: 0 12px 40px rgba(31, 62, 35, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7faf7;
+
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* ================= COMMON ================= */
+
+.hidden {
+    display: none !important;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* ================= LOGIN PAGE ================= */
+
+#loginPage {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e3f4e4 0%,
+            transparent 35%
+        ),
+        #f7faf7;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+
+    background: var(--white);
+
+    padding: 45px 40px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.logo span {
+    font-size: 32px;
+}
+
+.logo h1 {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: var(--dark-green);
+}
+
+.subtitle {
+    color: var(--secondary-text);
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #354035;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #fbfdfb;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+.input-group small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #8a938a;
+
+    font-size: 12px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.primary-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 20px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--dark-green);
+
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* ================= ERROR ================= */
+
+.error-message {
+    color: var(--danger);
+
+    font-size: 13px;
+
+    min-height: 18px;
+
+    margin-bottom: 10px;
+}
+
+.demo-login {
+    margin-top: 25px;
+
+    color: #8a938a;
+
+    font-size: 12px;
+}
+
+
+/* ================= MAIN APP ================= */
+
+#appPage {
+    background: #f7faf7;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 70px;
+
+    background: white;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 21px;
+
+    color: var(--dark-green);
+}
+
+.brand span {
+    font-size: 25px;
+}
+
+.logout-button {
+    border: 1px solid var(--border);
+
+    background: white;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    color: #555;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.logout-button:hover {
+    background: #f2f5f2;
+}
+
+
+/* ================= STEP SECTION ================= */
+
+.step-section {
+    width: 90%;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.step-number {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: var(--light-green);
+
+    color: var(--green);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.eyebrow {
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--secondary-text);
+
+    font-size: 14px;
+}
+
+
+/* ================= SEED SECTION ================= */
+
+.seed-selection {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.seed-image {
+    height: 350px;
+
+    background: #edf5ed;
+}
+
+.seed-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.seed-information {
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.seed-information .label {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    color: var(--green);
+
+    margin-bottom: 12px;
+}
+
+.seed-information h3 {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.seed-information > p:not(.label) {
+    color: var(--secondary-text);
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+
+    max-width: 400px;
+}
+
+.seed-information .primary-button {
+    width: auto;
+}
+
+
+/* ================= SOIL OPTIONS ================= */
+
+.soil-options {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.soil-option {
+    background: white;
+
+    border: 2px solid var(--border);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition: 0.2s;
+
+    text-align: left;
+}
+
+.soil-option:hover {
+    border-color: var(--green);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow);
+}
+
+.soil-option.selected {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 125, 50, 0.12);
+}
+
+.soil-option img {
+    width: 100%;
+
+    height: 160px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.soil-option span {
+    display: block;
+
+    padding: 16px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+
+/* ================= PH FORM ================= */
+
+.ph-form {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    max-width: 700px;
+
+    box-shadow: var(--shadow);
+}
+
+.ph-form .primary-button {
+    margin-top: 10px;
+}
+
+
+/* ================= PLAN SUMMARY ================= */
+
+.plan-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.plan-summary > div {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 20px;
+}
+
+.plan-summary span {
+    display: block;
+
+    font-size: 12px;
+
+    color: var(--secondary-text);
+
+    margin-bottom: 8px;
+}
+
+.plan-summary strong {
+    font-size: 17px;
+
+    color: var(--dark-green);
+}
+
+
+/* ================= PLAN INTRO ================= */
+
+.plan-introduction {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: var(--light-green);
+
+    border: 1px solid #d8ead8;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.plan-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.plan-introduction h3 {
+    margin-bottom: 6px;
+
+    font-size: 18px;
+}
+
+.plan-introduction p {
+    color: var(--secondary-text);
+
+    font-size: 14px;
+}
+
+
+/* ================= TRACKING HEADER ================= */
+
+.tracking-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 45px;
+}
+
+.tracking-header h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.tracking-header p {
+    color: var(--secondary-text);
+
+    font-size: 14px;
+}
+
+.day-counter {
+    text-align: right;
+
+    color: var(--green);
+}
+
+.day-counter span {
+    font-size: 38px;
+
+    font-weight: 700;
+}
+
+.day-counter small {
+    color: var(--secondary-text);
+
+    font-size: 14px;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-container {
+    position: relative;
+
+    margin: 20px 0 60px;
+}
+
+.progress-line {
+    position: absolute;
+
+    top: 10px;
+
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: #dfe8df;
+
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: var(--green);
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+.day-points {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.day-point {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #dfe8df;
+
+    border: 5px solid #f7faf7;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.day-point.active {
+    background: var(--green);
+}
+
+.day-point.completed {
+    background: var(--dark-green);
+}
+
+.day-point span {
+    position: absolute;
+
+    top: 28px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 10px;
+
+    color: #7b857b;
+
+    white-space: nowrap;
+}
+
+
+/* ================= CURRENT DAY ================= */
+
+.current-day-box {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.day-title {
+    background: var(--dark-green);
+
+    color: white;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.day-title span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.75;
+
+    margin-bottom: 8px;
+}
+
+.day-title strong {
+    font-size: 50px;
+}
+
+.day-content {
+    padding: 40px;
+}
+
+.day-content h3 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.day-content > p {
+    color: var(--secondary-text);
+
+    line-height: 1.6;
+
+    max-width: 700px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= ACTIVITIES ================= */
+
+.activity-list {
+    border-top: 1px solid var(--border);
+
+    margin-bottom: 28px;
+}
+
+.activity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.activity span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-green);
+
+    color: var(--green);
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.activity p {
+    color: #4d574e;
+
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .soil-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seed-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .seed-image {
+        height: 280px;
+    }
+
+    .current-day-box {
+        grid-template-columns: 1fr;
+    }
+
+    .day-title {
+        padding: 25px;
+    }
+
+    .day-title strong {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .login-box {
+        padding: 35px 25px;
+    }
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .step-section {
+        width: 92%;
+
+        padding: 45px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .soil-options {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .seed-information {
+        padding: 30px;
+    }
+
+    .ph-form {
+        padding: 25px;
+    }
+
+    .tracking-header {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .tracking-header h2 {
+        font-size: 24px;
+    }
+
+    .day-counter span {
+        font-size: 30px;
+    }
+
+    .day-content {
+        padding: 25px;
+    }
+
+    .day-content h3 {
+        font-size: 21px;
+    }
+
+    .progress-container {
+        overflow-x: auto;
+
+        padding-bottom: 10px;
+    }
+
+    .day-points {
+        min-width: 700px;
+    }
+
+    .progress-line {
+        min-width: 700px;
+    }
+}
+
+/* =====================================================
+   FARMX - PROFESSIONAL ANIMATIONS
+   ===================================================== */
+
+
+/* ================= PAGE ANIMATION ================= */
+
+.step-section {
+    animation: pageEnter 0.5s ease both;
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= LOGIN ANIMATION ================= */
+
+.login-box {
+    animation: loginAppear 0.7s ease both;
+}
+
+@keyframes loginAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ================= LOGO ANIMATION ================= */
+
+.logo span {
+    display: inline-block;
+
+    animation: plantFloat 3s ease-in-out infinite;
+}
+
+@keyframes plantFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* ================= SOIL SELECTION ================= */
+
+.soil-option {
+    position: relative;
+}
+
+.soil-option.selected {
+    animation: selectedSoil 0.35s ease;
+}
+
+@keyframes selectedSoil {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= BUTTON LOADING ================= */
+
+.primary-button.loading {
+    pointer-events: none;
+
+    opacity: 0.8;
+
+    position: relative;
+}
+
+.primary-button.loading::after {
+
+    content: "";
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    margin-left: 10px;
+
+    vertical-align: middle;
+
+    animation: buttonSpinner 0.7s linear infinite;
+}
+
+@keyframes buttonSpinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   PLAN CREATION LOADING SCREEN
+   ===================================================== */
+
+.plan-loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: rgba(247, 250, 247, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 1;
+
+    transition: opacity 0.4s ease;
+}
+
+.plan-loader.hide {
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.loader-box {
+
+    width: 90%;
+
+    max-width: 430px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    animation: loaderAppear 0.5s ease;
+}
+
+@keyframes loaderAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= LOADER ICON ================= */
+
+.loader-icon {
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+
+    animation: loaderPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(47, 125, 50, 0.15);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(47, 125, 50, 0);
+    }
+
+}
+
+
+.loader-box h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.loader-message {
+
+    color: var(--secondary-text);
+
+    font-size: 14px;
+
+    min-height: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= LOADER BAR ================= */
+
+.loader-progress {
+
+    width: 100%;
+
+    height: 6px;
+
+    background: #e7eee7;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.loader-progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: var(--green);
+
+    border-radius: 10px;
+
+    transition: width 0.6s ease;
+}
+
+
+/* ================= PLAN APPEAR ================= */
+
+.plan-reveal {
+
+    animation: planReveal 0.7s ease both;
+}
+
+@keyframes planReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   DAY CHANGE ANIMATION
+   ===================================================== */
+
+.day-content.day-changing {
+
+    animation: dayExit 0.25s ease forwards;
+}
+
+@keyframes dayExit {
+
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+}
+
+.day-content.day-enter {
+
+    animation: dayEnter 0.4s ease forwards;
+}
+
+@keyframes dayEnter {
+
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================= DAY NUMBER ================= */
+
+.day-title strong.day-changing {
+
+    animation: dayNumberChange 0.4s ease;
+}
+
+@keyframes dayNumberChange {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= COMPLETED DAY ================= */
+
+.day-point.completed {
+
+    animation: completedPoint 0.4s ease;
+}
+
+@keyframes completedPoint {
+
+    0% {
+        transform: scale(0.7);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= PROGRESS BAR ================= */
+
+.progress-bar {
+
+    transition:
+        width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ================= CURRENT DAY BOX ================= */
+
+.current-day-box {
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.current-day-box:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 45px rgba(31, 62, 35, 0.11);
+}
+
+
+/* ================= ACTIVITY ANIMATION ================= */
+
+.activity {
+
+    animation: activityAppear 0.45s ease both;
+}
+
+.activity:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.activity:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.activity:nth-child(3) {
+    animation-delay: 0.19s;
+}
+
+@keyframes activityAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-animation {
+
+    animation: successPop 0.6s ease;
+}
+
+@keyframes successPop {
+
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .loader-box {
+        padding: 32px 25px;
+    }
+
+    .loader-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 28px;
+    }
+
+}

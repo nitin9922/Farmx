@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FarmX | Smart Farming Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <section id="loginPage" class="page active">
+
+        <div class="login-box">
+
+            <div class="logo">
+                <span>🌱</span>
+                <h1>FarmX</h1>
+            </div>
+
+            <p class="subtitle">
+                Smart planning for better farming
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <p id="loginError" class="error-message"></p>
+
+                <button type="submit" class="primary-button">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="demo-login">
+                Prototype Login · admin / 1234
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN FARMX APP ================= -->
+
+    <main id="appPage" class="page">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="brand">
+                <span>🌱</span>
+                <strong>FarmX</strong>
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- ================= STEP 1 : SEED ================= -->
+
+        <section id="seedStep" class="step-section">
+
+            <div class="section-heading">
+
+                <span class="step-number">01</span>
+
+                <div>
+                    <p class="eyebrow">START YOUR PLAN</p>
+                    <h2>Select Your Seed</h2>
+                    <p>
+                        Choose the crop you want to grow.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="seed-selection">
+
+                <div class="seed-image">
+
+                    <img
+                        src="images/soybean.jpg"
+                        alt="Soybean"
+                    >
+
+                </div>
+
+                <div class="seed-information">
+
+                    <p class="label">AVAILABLE SEED</p>
+
+                    <h3>Soybean</h3>
+
+                    <p>
+                        Create a prototype germination plan
+                        specifically for soybean.
+                    </p>
+
+                    <button
+                        id="soybeanButton"
+                        class="primary-button"
+                    >
+                        Select Soybean
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STEP 2 : SOIL ================= -->
+
+        <section
+            id="soilStep"
+            class="step-section hidden"
+        >
+
+            <div class="section-heading">
+
+                <span class="step-number">02</span>
+
+                <div>
+                    <p class="eyebrow">YOUR LAND</p>
+
+                    <h2>Select Your Soil</h2>
+
+                    <p>
+                        Select the soil type of your farmland.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="soil-options">
+
+                <button
+                    class="soil-option"
+                    data-soil="Black Soil"
+                >
+
+                    <img
+                        src="images/black-soil.jpg"
+                        alt="Black Soil"
+                    >
+
+                    <span>Black Soil</span>
+
+                </button>
+
+
+                <button
+                    class="soil-option"
+                    data-soil="Red Soil"
+                >
+
+                    <img
+                        src="images/red-soil.jpg"
+                        alt="Red Soil"
+                    >
+
+                    <span>Red Soil</span>
+
+                </button>
+
+
+                <button
+                    class="soil-option"
+                    data-soil="Alluvial Soil"
+                >
+
+                    <img
+                        src="images/alluvial-soil.jpg"
+                        alt="Alluvial Soil"
+                    >
+
+                    <span>Alluvial Soil</span>
+
+                </button>
+
+
+                <button
+                    class="soil-option"
+                    data-soil="Loamy Soil"
+                >
+
+                    <img
+                        src="images/loamy-soil.jpg"
+                        alt="Loamy Soil"
+                    >
+
+                    <span>Loamy Soil</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STEP 3 : PH ================= -->
+
+        <section
+            id="phStep"
+            class="step-section hidden"
+        >
+
+            <div class="section-heading">
+
+                <span class="step-number">03</span>
+
+                <div>
+                    <p class="eyebrow">SOIL & WATER</p>
+
+                    <h2>Check pH Levels</h2>
+
+                    <p>
+                        Enter the pH values available from your
+                        soil and water tests.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="ph-form">
+
+                <div class="input-group">
+
+                    <label for="soilPH">
+                        Soil pH
+                    </label>
+
+                    <input
+                        type="number"
+                        id="soilPH"
+                        min="0"
+                        max="14"
+                        step="0.1"
+                        placeholder="Example: 6.5"
+                    >
+
+                    <small>
+                        Enter a value between 0 and 14.
+                    </small>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="waterPH">
+                        Water pH
+                    </label>
+
+                    <input
+                        type="number"
+                        id="waterPH"
+                        min="0"
+                        max="14"
+                        step="0.1"
+                        placeholder="Example: 7.0"
+                    >
+
+                    <small>
+                        Enter a value between 0 and 14.
+                    </small>
+
+                </div>
+
+
+                <p id="phError" class="error-message"></p>
+
+                <button
+                    id="generatePlanButton"
+                    class="primary-button"
+                >
+                    Generate My Plan
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STEP 4 : PLAN ================= -->
+
+        <section
+            id="planStep"
+            class="step-section hidden"
+        >
+
+            <div class="section-heading">
+
+                <span class="step-number">04</span>
+
+                <div>
+                    <p class="eyebrow">YOUR FARMING PLAN</p>
+
+                    <h2>Germination Plan</h2>
+
+                    <p>
+                        Your selected farming information.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="plan-summary">
+
+                <div>
+                    <span>Seed</span>
+                    <strong id="selectedSeed">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Soil</span>
+                    <strong id="selectedSoil">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Soil pH</span>
+                    <strong id="selectedSoilPH">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Water pH</span>
+                    <strong id="selectedWaterPH">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="plan-introduction">
+
+                <span class="plan-icon">🌱</span>
+
+                <div>
+
+                    <h3>
+                        30-Day Germination Plan
+                    </h3>
+
+                    <p>
+                        Follow each day's activity and continue
+                        to the next step after completing it.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="startPlanButton"
+                class="primary-button"
+            >
+                Start My Plan
+            </button>
+
+        </section>
+
+
+        <!-- ================= STEP 5 : TRACKING ================= -->
+
+        <section
+            id="trackingStep"
+            class="step-section hidden"
+        >
+
+            <div class="tracking-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FARMING JOURNEY
+                    </p>
+
+                    <h2>Germination Tracker</h2>
+
+                    <p>
+                        Complete each day to move forward.
+                    </p>
+
+                </div>
+
+                <div class="day-counter">
+
+                    <span id="currentDay">
+                        1
+                    </span>
+
+                    <small>/ 30 Days</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS LINE -->
+
+            <div class="progress-container">
+
+                <div class="progress-line">
+
+                    <div
+                        id="progressBar"
+                        class="progress-bar"
+                    ></div>
+
+                </div>
+
+                <div
+                    id="dayPoints"
+                    class="day-points"
+                ></div>
+
+            </div>
+
+
+            <!-- CURRENT DAY -->
+
+            <div class="current-day-box">
+
+                <div class="day-title">
+
+                    <span>
+                        DAY
+                    </span>
+
+                    <strong id="dayNumber">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div class="day-content">
+
+                    <p class="eyebrow">
+                        TODAY'S ACTIVITY
+                    </p>
+
+                    <h3 id="dayTitle">
+                        Seed & Soil Preparation
+                    </h3>
+
+                    <p id="dayDescription">
+                        Prepare the selected area of soil
+                        and follow the recommended preparation
+                        process for the soybean germination plan.
+                    </p>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity">
+                            <span>01</span>
+                            <p id="activityOne">
+                                Prepare the soil.
+                            </p>
+                        </div>
+
+                        <div class="activity">
+                            <span>02</span>
+                            <p id="activityTwo">
+                                Check soil moisture.
+                            </p>
+                        </div>
+
+                        <div class="activity">
+                            <span>03</span>
+                            <p id="activityThree">
+                                Prepare the seeds according
+                                to the farming plan.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="continueButton"
+                        class="primary-button"
+                    >
+                        Complete Day 1
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
