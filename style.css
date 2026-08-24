@@ -55,6 +55,18 @@ body {
     min-height: 100vh;
 }
 
+#appPage {
+    display: none;
+}
+
+#appPage:not(.hidden) {
+    display: block;
+}
+
+#loginPage.hidden {
+    display: none;
+}
+
 
 /* ================= LOGIN PAGE ================= */
 
